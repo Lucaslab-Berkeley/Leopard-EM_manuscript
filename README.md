@@ -1,2 +1,2 @@
-# Leopard-EM_manuscript_scripts
+# Leopard-EM manuscript scripts
 Scripts and notebooks used to analyze data presented in the Leopard-EM manuscript
