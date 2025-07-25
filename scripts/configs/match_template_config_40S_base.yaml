@@ -1,0 +1,56 @@
+
+computational_config:
+  gpu_ids:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  num_cpus: 16
+defocus_search_config:
+  defocus_max: 1200.0
+  defocus_min: -1200.0
+  defocus_step: 200.0
+  enabled: true
+match_template_result:
+  allow_file_overwrite: true
+  correlation_average_path: /global/scratch/users/jdickerson/2dtm_test_data/xe30kv/results_match_tm_40S-body_noB/output_correlation_average.mrc
+  correlation_variance_path: /global/scratch/users/jdickerson/2dtm_test_data/xe30kv/results_match_tm_40S-body_noB/output_correlation_variance.mrc
+  mip_path: /global/scratch/users/jdickerson/2dtm_test_data/xe30kv/results_match_tm_40S-body_noB/output_mip.mrc
+  orientation_phi_path: /global/scratch/users/jdickerson/2dtm_test_data/xe30kv/results_match_tm_40S-body_noB/output_orientation_phi.mrc
+  orientation_psi_path: /global/scratch/users/jdickerson/2dtm_test_data/xe30kv/results_match_tm_40S-body_noB/output_orientation_psi.mrc
+  orientation_theta_path: /global/scratch/users/jdickerson/2dtm_test_data/xe30kv/results_match_tm_40S-body_noB/output_orientation_theta.mrc
+  relative_defocus_path: /global/scratch/users/jdickerson/2dtm_test_data/xe30kv/results_match_tm_40S-body_noB/output_relative_defocus.mrc
+  scaled_mip_path: /global/scratch/users/jdickerson/2dtm_test_data/xe30kv/results_match_tm_40S-body_noB/output_scaled_mip.mrc
+micrograph_path: /global/scratch/users/jdickerson/2dtm_test_data/xe30kv/all_mgraphs/
+optics_group:
+  label: micrograph_1
+  amplitude_contrast_ratio: 0.07
+  ctf_B_factor: 0.0
+  astigmatism_angle: 39.417260
+  defocus_u: 5978.758301
+  defocus_v: 5617.462402
+  phase_shift: 0.0
+  pixel_size: 0.936
+  spherical_aberration: 2.7
+  voltage: 300.0
+orientation_search_config:
+  psi_step: 1.5
+  base_grid_method: uniform
+  theta_step: 2.5
+preprocessing_filters:
+  bandpass_filter:
+    enabled: false
+    falloff: 0.05
+    high_freq_cutoff: 0.5
+    low_freq_cutoff: 0.0
+  whitening_filter:
+    enabled: true
+    do_power_spectrum: true
+    max_freq: 1.0
+    num_freq_bins: null
+template_volume_path: /global/scratch/users/jdickerson/2dtm_test_data/maps2/SSU-body_map_px0.936_bscale0.5.mrc
+  

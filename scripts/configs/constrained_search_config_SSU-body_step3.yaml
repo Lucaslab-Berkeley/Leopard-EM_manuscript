@@ -1,0 +1,53 @@
+###################################################
+#### Constrained Search configuration example #####
+###################################################
+# An example YAML configuration to modify.
+# Call `RefineTemplateManager.from_yaml(path)` to load this configuration.
+template_volume_path: /data/papers/Leopard-EM_paper_data/maps2/SSU-body_map_px0.936_bscale0.5.mrc # Volume of small particle
+particle_stack_reference: # This is from the large particles
+  df_path: /some/path/to/particles.csv  # Needs to be readable by pandas
+  extracted_box_size: [520, 520]
+  original_template_size: [512, 512]
+particle_stack_constrained: # This is from the small particles
+  df_path: /some/path/to/particles.csv  # Needs to be readable by pandas
+  extracted_box_size: [520, 520]
+  original_template_size: [512, 512]
+center_vector: [0.0, 0.0, 0.0] # Vector from large particle to small particle in Angstroms
+orientation_refinement_config:
+  enabled: true
+  base_grid_method: uniform 
+  psi_step: 1.0     # psi in degrees
+  theta_step: 1.0   # theta and phi in degrees
+  rotation_axis_euler_angles: [76.2, 60.02, 0.0] # This is the rotation axis
+  phi_min: 0.0
+  phi_max: 0.0
+  theta_min: -6.0
+  theta_max: 4.0
+  psi_min: 0.0
+  psi_max: 0.0
+  search_roll_axis: false
+  roll_axis: [0.0,1.0] # [x,y] This defines the roll axis (orthogonal to the rotation axis). None means search
+  roll_step: 2.0 
+defocus_refinement_config:
+  enabled: false
+  defocus_max:  100.0  # in Angstroms, relative to "best" defocus value in particle stack dataframe
+  defocus_min: -100.0  # in Angstroms, relative to "best" defocus value in particle stack dataframe
+  defocus_step: 20.0   # in Angstroms
+preprocessing_filters:
+  whitening_filter:
+    do_power_spectrum: true
+    enabled: true
+    max_freq: 1.0  # In terms of Nyquist frequency
+    num_freq_bins: null
+  bandpass_filter:
+    enabled: false
+    falloff: null
+    high_freq_cutoff: null
+    low_freq_cutoff: null
+computational_config:
+  gpu_ids: 
+  - 0
+  - 1
+  - 2
+  - 3
+  num_cpus: 2
