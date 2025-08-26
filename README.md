@@ -9,13 +9,12 @@ Installing Leopard-EM (fixed at version 1.0 for manuscript release) along with m
 pip install leopard-em==1.0 matplotlib
 ```
 
-## Script and data layout
+## 🚧 Datasets used in manuscript 🚧
 
-Raw and processed data presented in the Leopard-EM manuscript is hosted at: (TODO)
-
-The enclosing folder `data/` contains the scripts which were used to process the data as well as the directory structure for the data.
+Raw and processed data presented in the Leopard-EM manuscript will be publically uploaded and avaliable upon mauscript release.
+Some example data used to demonstrate the use of Leopard-EM can be found in the [online documentation](https://lucaslab-berkeley.github.io/Leopard-EM/)
 
 ## List of notebooks and corresponding figures
 
-Notebooks used to generate the figures are located under `figures/`
-Some post-processing was applied to these figures, but the list of notebooks and main content are as follows: (TODO)
+Notebooks used to generate the figures are located under `figures/`.
+Some minor post-processing was applied to these figures, but their contents remains the same.
